@@ -13,7 +13,7 @@ module OmniAuth
              authorize_url: '/auth/authorize',
              token_url: '/auth/token'
       option :authorize_params,
-             response_mode: 'form_post',
+             response_mode: 'query',
              scope: 'email name'
       option :authorized_client_ids, []
 
