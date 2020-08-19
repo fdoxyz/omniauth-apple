@@ -81,6 +81,10 @@ module OmniAuth
       end
 
       def verify_nonce!(payload)
+        puts "VERIFY NONCE DEBUG"
+        puts payload.inspect
+        puts session['omniauth.nonce']
+        puts session['omniauth.nonce'].inspect
         return unless payload['nonce_supported']
 
         return if payload['nonce'] && payload['nonce'] == stored_nonce
